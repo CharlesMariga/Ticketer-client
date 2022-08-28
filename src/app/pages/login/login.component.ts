@@ -8,8 +8,14 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
 })
 export class LoginComponent implements OnInit {
   faLock = faLock;
+  email: string;
+  password: string;
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  loginUser() {
+    console.log(this.email, this.password);
+  }
 }

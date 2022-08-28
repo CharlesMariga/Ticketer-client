@@ -5,7 +5,7 @@
     >
       Sign in to your account
     </h2>
-    <form class="mt-8 space-y-6">
+    <form ngNativeValidate class="mt-8 space-y-6" (ngSubmit)="loginUser()">
       <div class="rounded-md shadow-sm -space-y-px">
         <div>
           <label for="email-address" class="sr-only">Email address</label>
@@ -13,10 +13,10 @@
             id="email-address"
             name="email"
             type="email"
-            autocomplete="email"
             required
             class="appearance-none rounded-none relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm md:text-base"
             placeholder="Email address"
+            [(ngModel)]="email"
           />
         </div>
         <div>
@@ -29,6 +29,8 @@
             required
             class="appearance-none rounded-none relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm md:text-base"
             placeholder="Password"
+            minlength="8"
+            [(ngModel)]="password"
           />
         </div>
       </div>

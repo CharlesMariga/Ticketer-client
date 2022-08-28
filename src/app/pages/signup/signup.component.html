@@ -5,8 +5,21 @@
     >
       Create an account
     </h2>
-    <form class="mt-8 space-y-6">
+    <form ngNativeValidate class="mt-8 space-y-6">
       <div class="rounded-md shadow-sm -space-y-px">
+        <div>
+          <label for="email-address" class="sr-only">Name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            required
+            class="appearance-none rounded-none relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm md:text-base"
+            placeholder="Name"
+            minlength="3"
+          />
+        </div>
         <div>
           <label for="email-address" class="sr-only">Email address</label>
           <input
@@ -15,7 +28,7 @@
             type="email"
             autocomplete="email"
             required
-            class="appearance-none rounded-none relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm md:text-base"
+            class="appearance-none rounded-none relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm md:text-base"
             placeholder="Email address"
           />
         </div>
@@ -29,6 +42,7 @@
             required
             class="appearance-none rounded-none relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm md:text-base"
             placeholder="Password"
+            minlength="8"
           />
         </div>
         <div>
@@ -41,6 +55,7 @@
             required
             class="appearance-none rounded-none relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm md:text-base"
             placeholder="Password confirm"
+            minlength="8"
           />
         </div>
       </div>
