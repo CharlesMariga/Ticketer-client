@@ -26,6 +26,7 @@ export class ConstantService {
 
   static successMessages = {
     userLoggedin: 'User logged in successfully!',
+    userLogout: 'Logged out successfully!',
   };
 
   constructor() {}

@@ -35,6 +35,23 @@ export class AuthService {
     localStorage.setItem(ConstantService.localStorageKeys.token, token);
   }
 
+  getUserData(): IUser {
+    return JSON.parse(
+      localStorage.getItem(ConstantService.localStorageKeys.userData) || ''
+    );
+  }
+
+  /**
+   * Sets user data to local storage
+   * @param userData
+   */
+  setUserData(userData: IUser) {
+    localStorage.setItem(
+      ConstantService.localStorageKeys.userData,
+      JSON.stringify(userData)
+    );
+  }
+
   /**
    * Logout a user and navigate to /login
    */

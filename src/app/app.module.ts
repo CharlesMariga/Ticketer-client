@@ -18,6 +18,9 @@ import { InterceptorService } from './services/interceptor.service';
 import { AuthGuardService } from './services/auth-guard.service';
 import { AuthService } from './services/auth.service';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { TableComponent } from './components/table/table.component';
+import { DefaultLayoutComponent } from './layouts/default-layout/default-layout.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,9 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     FooterComponent,
     AlertComponent,
     DashboardComponent,
+    ProfileComponent,
+    TableComponent,
+    DefaultLayoutComponent,
   ],
   imports: [
     BrowserModule,

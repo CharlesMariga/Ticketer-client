@@ -21,6 +21,7 @@
             class="appearance-none rounded-none relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm md:text-base"
             placeholder="Name"
             minlength="3"
+            [(ngModel)]="name"
           />
         </div>
         <div>
@@ -33,6 +34,7 @@
             required
             class="appearance-none rounded-none relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm md:text-base"
             placeholder="Email address"
+            [(ngModel)]="email"
           />
         </div>
         <div>
@@ -46,6 +48,7 @@
             class="appearance-none rounded-none relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm md:text-base"
             placeholder="Password"
             minlength="8"
+            [(ngModel)]="password"
           />
         </div>
         <div>
@@ -59,6 +62,7 @@
             class="appearance-none rounded-none relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm md:text-base"
             placeholder="Password confirm"
             minlength="8"
+            [(ngModel)]="passwordConfirm"
           />
         </div>
       </div>
@@ -74,7 +78,7 @@
               class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
             ></fa-icon>
           </span>
-          Sign up
+          {{ loading ? "Loading..." : "Sign up" }}
         </button>
       </div>
 

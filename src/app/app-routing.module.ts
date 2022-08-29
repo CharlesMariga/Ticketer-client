@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { AuthGuardService } from './services/auth-guard.service';
 
@@ -14,6 +15,11 @@ const routes: Routes = [
     path: 'dashboard',
     canActivate: [AuthGuardService],
     component: DashboardComponent,
+  },
+  {
+    path: 'profile',
+    canActivate: [AuthGuardService],
+    component: ProfileComponent,
   },
   { path: '**', component: PageNotFoundComponent },
 ];

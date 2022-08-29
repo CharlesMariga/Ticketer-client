@@ -22,7 +22,9 @@ export class LoginComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (this.authService.getToken()) this.router.navigate(['/dashboard']);
+  }
 
   loginUser() {
     this.loading = true;
