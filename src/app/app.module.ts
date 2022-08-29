@@ -11,6 +11,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AlertComponent } from './components/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PageNotFoundComponent,
     SignupComponent,
     FooterComponent,
+    AlertComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, FontAwesomeModule],
   providers: [],

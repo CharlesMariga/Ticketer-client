@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
+import { UiService } from 'src/app/services/ui.service';
 
 @Component({
   selector: 'app-login',
@@ -11,11 +12,12 @@ export class LoginComponent implements OnInit {
   email: string;
   password: string;
 
-  constructor() {}
+  constructor(private uiService: UiService) {}
 
   ngOnInit(): void {}
 
   loginUser() {
     console.log(this.email, this.password);
+    this.uiService.toggleShowAlert('green', 'Hello world');
   }
 }
