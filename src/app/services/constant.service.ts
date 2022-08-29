@@ -4,7 +4,7 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root',
 })
-export class ContantService {
+export class ConstantService {
   static apiRoutes = {
     login: `${environment.baseUrl}/api/v1/users/login`,
     signup: `${environment.baseUrl}/api/v1/users/signup`,
