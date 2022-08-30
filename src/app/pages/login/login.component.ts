@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.email, this.password).subscribe(
       (response) => {
         this.authService.setToken(response.token);
-        this.loading = false;
+        this.authService.setUserData(response.data.user);
         this.uiService.toggleShowAlert(
           'green',
           ConstantService.successMessages.userLoggedin
@@ -41,7 +41,6 @@ export class LoginComponent implements OnInit {
         }, 4000);
       },
       (error) => {
-        console.log(error);
         this.loading = false;
         this.uiService.toggleShowAlert('red', error.error.message);
       }

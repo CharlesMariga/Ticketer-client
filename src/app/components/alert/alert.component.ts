@@ -28,7 +28,6 @@ export class AlertComponent implements OnInit {
 
   constructor(private uiService: UiService) {
     this.uiService.onToggleShowAlert().subscribe((value) => {
-      console.log(value);
       this.text = value.msg;
       this.color = value.color;
       this.show = value.showAlert;

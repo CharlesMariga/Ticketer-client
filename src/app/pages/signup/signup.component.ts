@@ -32,7 +32,7 @@ export class SignupComponent implements OnInit {
       .signup(this.name, this.email, this.password, this.passwordConfirm)
       .subscribe((response: IUserResponse) => {
         this.authService.setToken(response.token);
-        this.loading = false;
+        this.authService.setUserData(response.data.user);
         this.uiService.toggleShowAlert(
           'green',
           ConstantService.successMessages.userLoggedin

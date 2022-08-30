@@ -56,8 +56,25 @@ export class AuthService {
    * Logout a user and navigate to /login
    */
   logoutUser() {
-    localStorage.clear();
+    this.clearLocalStorage();
     this.router.navigate(['/login']);
+  }
+
+  clearLocalStorage() {
+    localStorage.clear();
+  }
+
+  saveImpersonatorToken(token: string) {
+    localStorage.setItem(
+      ConstantService.localStorageKeys.impersonatorToken,
+      token
+    );
+  }
+
+  getImpersonatorToken() {
+    return localStorage.getItem(
+      ConstantService.localStorageKeys.impersonatorToken
+    );
   }
 
   isAuthenticated(): boolean {
@@ -83,5 +100,13 @@ export class AuthService {
       password,
       passwordConfirm,
     });
+  }
+
+  impersonate(email: string): Observable<IUserResponse> {
+    return this.http.post<IUserResponse>(this.apiRoutes.impersonate, { email });
+  }
+
+  endImpersonation(): Observable<IUserResponse> {
+    return this.http.post<IUserResponse>(this.apiRoutes.endImpersonation, {});
   }
 }

@@ -12,6 +12,7 @@ import { ConstantService } from 'src/app/services/constant.service';
 export class NavbarComponent implements OnInit {
   showMobileNav = false;
   showDropdown = false;
+  loggedInUserName = '';
 
   constructor(
     private authService: AuthService,
@@ -19,7 +20,9 @@ export class NavbarComponent implements OnInit {
     private uiService: UiService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.loggedInUserName = this.authService.getUserData().name;
+  }
 
   signOut() {
     this.authService.logoutUser();

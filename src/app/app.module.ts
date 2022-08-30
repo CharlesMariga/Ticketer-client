@@ -21,6 +21,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { TableComponent } from './components/table/table.component';
 import { DefaultLayoutComponent } from './layouts/default-layout/default-layout.component';
+import { PageLoaderComponent } from './components/page-loader/page-loader.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { DefaultLayoutComponent } from './layouts/default-layout/default-layout.
     ProfileComponent,
     TableComponent,
     DefaultLayoutComponent,
+    PageLoaderComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
